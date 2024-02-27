@@ -1,0 +1,919 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C05F44B2B8D631900FACB86 /* TouchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C05F44A2B8D631900FACB86 /* TouchState.swift */; };
+		3C40F07A2B8A82400083FDF4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C40F0792B8A82400083FDF4 /* HomeViewModel.swift */; };
+		3C40F07C2B8A824A0083FDF4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C40F07B2B8A824A0083FDF4 /* HomeView.swift */; };
+		3C591C3B2B5F9106000432A4 /* swifty_bankApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C591C3A2B5F9106000432A4 /* swifty_bankApp.swift */; };
+		3C591C3D2B5F9106000432A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C591C3C2B5F9106000432A4 /* ContentView.swift */; };
+		3C591C432B5F9107000432A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C591C422B5F9107000432A4 /* Preview Assets.xcassets */; };
+		3C591C4D2B5F9107000432A4 /* swifty_bankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C591C4C2B5F9107000432A4 /* swifty_bankTests.swift */; };
+		3C591C572B5F9107000432A4 /* swifty_bankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C591C562B5F9107000432A4 /* swifty_bankUITests.swift */; };
+		3C591C592B5F9107000432A4 /* swifty_bankUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C591C582B5F9107000432A4 /* swifty_bankUITestsLaunchTests.swift */; };
+		3C591C672B5F97F0000432A4 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3C591C662B5F97F0000432A4 /* CachedAsyncImage */; };
+		3C591C912B5FE5AA000432A4 /* NotoSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C591C832B5FE5AA000432A4 /* NotoSans.swift */; };
+		3C591CA02B5FE5D2000432A4 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C591C9C2B5FE5D2000432A4 /* Config.swift */; };
+		3C591CA12B5FE5D2000432A4 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C591C9D2B5FE5D2000432A4 /* UserDefaultsManager.swift */; };
+		3C591CA22B5FE5D2000432A4 /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C591C9E2B5FE5D2000432A4 /* Dimensions.swift */; };
+		3C591CA32B5FE5D2000432A4 /* Taptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C591C9F2B5FE5D2000432A4 /* Taptic.swift */; };
+		3C6B91F72B8E24DB001439B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C6B91F62B8E24DB001439B2 /* Assets.xcassets */; };
+		3CAFFDBA2B6C5F7400C532CF /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAFFDB92B6C5F7400C532CF /* ViewRouter.swift */; };
+		3CAFFDBC2B6C670500C532CF /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAFFDBB2B6C670500C532CF /* TabBarItem.swift */; };
+		3CAFFDBE2B6C67D800C532CF /* CustomIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFFDBD2B6C67D800C532CF /* CustomIcons.xcassets */; };
+		3CD71EDD2B72524500714321 /* NotoSansKR-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CE546FF2B70F53C00F1AA09 /* NotoSansKR-Black.ttf */; };
+		3CD71EDE2B72524800714321 /* NotoSansKR-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CE547022B70F53C00F1AA09 /* NotoSansKR-ExtraLight.ttf */; };
+		3CD71EDF2B72524800714321 /* NotoSansKR-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CE546FC2B70F53C00F1AA09 /* NotoSansKR-Medium.ttf */; };
+		3CD71EE02B72524800714321 /* NotoSansKR-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CE547032B70F53C00F1AA09 /* NotoSansKR-SemiBold.ttf */; };
+		3CD71EE12B72524800714321 /* NotoSansKR-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CE547042B70F53C00F1AA09 /* NotoSansKR-Regular.ttf */; };
+		3CD71EE22B72524800714321 /* NotoSansKR-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CE546FD2B70F53C00F1AA09 /* NotoSansKR-Thin.ttf */; };
+		3CD71EE32B72524800714321 /* NotoSansKR-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CE546FE2B70F53C00F1AA09 /* NotoSansKR-ExtraBold.ttf */; };
+		3CD71EE42B72524800714321 /* NotoSansKR-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CE547002B70F53C00F1AA09 /* NotoSansKR-Light.ttf */; };
+		3CD71EE52B72524800714321 /* NotoSansKR-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CE547012B70F53C00F1AA09 /* NotoSansKR-Bold.ttf */; };
+		3CE546F32B70E2CA00F1AA09 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE546F02B70E0B400F1AA09 /* PasswordView.swift */; };
+		3CE546F42B70E2CC00F1AA09 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE546EE2B70E0B100F1AA09 /* PasswordViewModel.swift */; };
+		3CE546F62B70E4CE00F1AA09 /* NumberPadItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE546F52B70E4CE00F1AA09 /* NumberPadItem.swift */; };
+		3CE546F82B70E4D900F1AA09 /* InputItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE546F72B70E4D900F1AA09 /* InputItem.swift */; };
+		3CE546FB2B70F1E600F1AA09 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE546FA2B70F1E600F1AA09 /* RoundedCorner.swift */; };
+		3CE547072B70F54600F1AA09 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CE547052B70F54600F1AA09 /* OFL.txt */; };
+		3CE547082B70F54600F1AA09 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CE547062B70F54600F1AA09 /* README.txt */; };
+		3CE5470C2B70F7A100F1AA09 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE5470B2B70F7A100F1AA09 /* WebViewModel.swift */; };
+		3CE547102B70F7B100F1AA09 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE5470F2B70F7B100F1AA09 /* WebView.swift */; };
+		6B148F4C1923ED6E6791AAA5 /* Pods_swifty_bank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACDCA2DC5D88A45F2E8A1E5 /* Pods_swifty_bank.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3C591C492B5F9107000432A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C591C2F2B5F9106000432A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C591C362B5F9106000432A4;
+			remoteInfo = "swifty-bank";
+		};
+		3C591C532B5F9107000432A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C591C2F2B5F9106000432A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C591C362B5F9106000432A4;
+			remoteInfo = "swifty-bank";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2880CA8A3034007CE08FF0F4 /* Pods-swifty-bank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifty-bank.release.xcconfig"; path = "Target Support Files/Pods-swifty-bank/Pods-swifty-bank.release.xcconfig"; sourceTree = "<group>"; };
+		3ACDCA2DC5D88A45F2E8A1E5 /* Pods_swifty_bank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swifty_bank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C05F44A2B8D631900FACB86 /* TouchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchState.swift; sourceTree = "<group>"; };
+		3C40F0792B8A82400083FDF4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		3C40F07B2B8A824A0083FDF4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3C591C372B5F9106000432A4 /* swifty-bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swifty-bank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C591C3A2B5F9106000432A4 /* swifty_bankApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swifty_bankApp.swift; sourceTree = "<group>"; };
+		3C591C3C2B5F9106000432A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3C591C402B5F9107000432A4 /* swifty_bank.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = swifty_bank.entitlements; sourceTree = "<group>"; };
+		3C591C422B5F9107000432A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3C591C482B5F9107000432A4 /* swifty-bankTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swifty-bankTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C591C4C2B5F9107000432A4 /* swifty_bankTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swifty_bankTests.swift; sourceTree = "<group>"; };
+		3C591C522B5F9107000432A4 /* swifty-bankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swifty-bankUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C591C562B5F9107000432A4 /* swifty_bankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swifty_bankUITests.swift; sourceTree = "<group>"; };
+		3C591C582B5F9107000432A4 /* swifty_bankUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swifty_bankUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3C591C832B5FE5AA000432A4 /* NotoSans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotoSans.swift; sourceTree = "<group>"; };
+		3C591C9C2B5FE5D2000432A4 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		3C591C9D2B5FE5D2000432A4 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		3C591C9E2B5FE5D2000432A4 /* Dimensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
+		3C591C9F2B5FE5D2000432A4 /* Taptic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Taptic.swift; sourceTree = "<group>"; };
+		3C6B91F62B8E24DB001439B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3CAFFDB92B6C5F7400C532CF /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		3CAFFDBB2B6C670500C532CF /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		3CAFFDBD2B6C67D800C532CF /* CustomIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CustomIcons.xcassets; sourceTree = "<group>"; };
+		3CE546EE2B70E0B100F1AA09 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
+		3CE546F02B70E0B400F1AA09 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
+		3CE546F52B70E4CE00F1AA09 /* NumberPadItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadItem.swift; sourceTree = "<group>"; };
+		3CE546F72B70E4D900F1AA09 /* InputItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputItem.swift; sourceTree = "<group>"; };
+		3CE546FA2B70F1E600F1AA09 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		3CE546FC2B70F53C00F1AA09 /* NotoSansKR-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.ttf"; sourceTree = "<group>"; };
+		3CE546FD2B70F53C00F1AA09 /* NotoSansKR-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Thin.ttf"; sourceTree = "<group>"; };
+		3CE546FE2B70F53C00F1AA09 /* NotoSansKR-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-ExtraBold.ttf"; sourceTree = "<group>"; };
+		3CE546FF2B70F53C00F1AA09 /* NotoSansKR-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Black.ttf"; sourceTree = "<group>"; };
+		3CE547002B70F53C00F1AA09 /* NotoSansKR-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.ttf"; sourceTree = "<group>"; };
+		3CE547012B70F53C00F1AA09 /* NotoSansKR-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.ttf"; sourceTree = "<group>"; };
+		3CE547022B70F53C00F1AA09 /* NotoSansKR-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-ExtraLight.ttf"; sourceTree = "<group>"; };
+		3CE547032B70F53C00F1AA09 /* NotoSansKR-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-SemiBold.ttf"; sourceTree = "<group>"; };
+		3CE547042B70F53C00F1AA09 /* NotoSansKR-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.ttf"; sourceTree = "<group>"; };
+		3CE547052B70F54600F1AA09 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		3CE547062B70F54600F1AA09 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		3CE547092B70F63F00F1AA09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3CE5470B2B70F7A100F1AA09 /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
+		3CE5470F2B70F7B100F1AA09 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		D3917569FFE292439AE5A172 /* Pods-swifty-bank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifty-bank.debug.xcconfig"; path = "Target Support Files/Pods-swifty-bank/Pods-swifty-bank.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C591C342B5F9106000432A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C591C672B5F97F0000432A4 /* CachedAsyncImage in Frameworks */,
+				6B148F4C1923ED6E6791AAA5 /* Pods_swifty_bank.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C591C452B5F9107000432A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C591C4F2B5F9107000432A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C40F0782B8A822D0083FDF4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C40F07B2B8A824A0083FDF4 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3C591C2E2B5F9106000432A4 = {
+			isa = PBXGroup;
+			children = (
+				3C591C392B5F9106000432A4 /* swifty-bank */,
+				3C591C4B2B5F9107000432A4 /* swifty-bankTests */,
+				3C591C552B5F9107000432A4 /* swifty-bankUITests */,
+				3C591C382B5F9106000432A4 /* Products */,
+				83B88A7B6D2286DC0415943D /* Pods */,
+				D68F395D52C19E5868CD0290 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3C591C382B5F9106000432A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C591C372B5F9106000432A4 /* swifty-bank.app */,
+				3C591C482B5F9107000432A4 /* swifty-bankTests.xctest */,
+				3C591C522B5F9107000432A4 /* swifty-bankUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C591C392B5F9106000432A4 /* swifty-bank */ = {
+			isa = PBXGroup;
+			children = (
+				3CE547092B70F63F00F1AA09 /* Info.plist */,
+				3CE5470A2B70F77100F1AA09 /* WebView */,
+				3CE546F92B70F1D700F1AA09 /* Extensions */,
+				3CE546ED2B70E0A700F1AA09 /* Password */,
+				3CAFFDB82B6C5BF000C532CF /* Home */,
+				3C591C9B2B5FE5D2000432A4 /* Config */,
+				3C591C7E2B5FE5AA000432A4 /* Font */,
+				3C591C3A2B5F9106000432A4 /* swifty_bankApp.swift */,
+				3C591C3C2B5F9106000432A4 /* ContentView.swift */,
+				3C6B91F62B8E24DB001439B2 /* Assets.xcassets */,
+				3CAFFDBD2B6C67D800C532CF /* CustomIcons.xcassets */,
+				3C591C402B5F9107000432A4 /* swifty_bank.entitlements */,
+				3C591C412B5F9107000432A4 /* Preview Content */,
+			);
+			path = "swifty-bank";
+			sourceTree = "<group>";
+		};
+		3C591C412B5F9107000432A4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3C591C422B5F9107000432A4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3C591C4B2B5F9107000432A4 /* swifty-bankTests */ = {
+			isa = PBXGroup;
+			children = (
+				3C591C4C2B5F9107000432A4 /* swifty_bankTests.swift */,
+			);
+			path = "swifty-bankTests";
+			sourceTree = "<group>";
+		};
+		3C591C552B5F9107000432A4 /* swifty-bankUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3C591C562B5F9107000432A4 /* swifty_bankUITests.swift */,
+				3C591C582B5F9107000432A4 /* swifty_bankUITestsLaunchTests.swift */,
+			);
+			path = "swifty-bankUITests";
+			sourceTree = "<group>";
+		};
+		3C591C7E2B5FE5AA000432A4 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				3CE547052B70F54600F1AA09 /* OFL.txt */,
+				3CE547062B70F54600F1AA09 /* README.txt */,
+				3CE546FF2B70F53C00F1AA09 /* NotoSansKR-Black.ttf */,
+				3CE547012B70F53C00F1AA09 /* NotoSansKR-Bold.ttf */,
+				3CE546FE2B70F53C00F1AA09 /* NotoSansKR-ExtraBold.ttf */,
+				3CE547022B70F53C00F1AA09 /* NotoSansKR-ExtraLight.ttf */,
+				3CE547002B70F53C00F1AA09 /* NotoSansKR-Light.ttf */,
+				3CE546FC2B70F53C00F1AA09 /* NotoSansKR-Medium.ttf */,
+				3CE547042B70F53C00F1AA09 /* NotoSansKR-Regular.ttf */,
+				3CE547032B70F53C00F1AA09 /* NotoSansKR-SemiBold.ttf */,
+				3CE546FD2B70F53C00F1AA09 /* NotoSansKR-Thin.ttf */,
+				3C591C832B5FE5AA000432A4 /* NotoSans.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		3C591C9B2B5FE5D2000432A4 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				3C591C9C2B5FE5D2000432A4 /* Config.swift */,
+				3C591C9D2B5FE5D2000432A4 /* UserDefaultsManager.swift */,
+				3C591C9E2B5FE5D2000432A4 /* Dimensions.swift */,
+				3C591C9F2B5FE5D2000432A4 /* Taptic.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		3CAFFDB82B6C5BF000C532CF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3C40F0792B8A82400083FDF4 /* HomeViewModel.swift */,
+				3C40F0782B8A822D0083FDF4 /* View */,
+				3CAFFDB92B6C5F7400C532CF /* ViewRouter.swift */,
+				3CAFFDBB2B6C670500C532CF /* TabBarItem.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3CE546ED2B70E0A700F1AA09 /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				3CE546EE2B70E0B100F1AA09 /* PasswordViewModel.swift */,
+				3CE546EF2B70E0B400F1AA09 /* View */,
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
+		3CE546EF2B70E0B400F1AA09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3CE546F02B70E0B400F1AA09 /* PasswordView.swift */,
+				3CE546F52B70E4CE00F1AA09 /* NumberPadItem.swift */,
+				3CE546F72B70E4D900F1AA09 /* InputItem.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3CE546F92B70F1D700F1AA09 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3CE546FA2B70F1E600F1AA09 /* RoundedCorner.swift */,
+				3C05F44A2B8D631900FACB86 /* TouchState.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3CE5470A2B70F77100F1AA09 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				3CE5470D2B70F7A400F1AA09 /* View */,
+				3CE5470B2B70F7A100F1AA09 /* WebViewModel.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		3CE5470D2B70F7A400F1AA09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3CE5470F2B70F7B100F1AA09 /* WebView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		83B88A7B6D2286DC0415943D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3917569FFE292439AE5A172 /* Pods-swifty-bank.debug.xcconfig */,
+				2880CA8A3034007CE08FF0F4 /* Pods-swifty-bank.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D68F395D52C19E5868CD0290 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3ACDCA2DC5D88A45F2E8A1E5 /* Pods_swifty_bank.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3C591C362B5F9106000432A4 /* swifty-bank */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C591C5C2B5F9107000432A4 /* Build configuration list for PBXNativeTarget "swifty-bank" */;
+			buildPhases = (
+				EF06B009253DD3BD139211CA /* [CP] Check Pods Manifest.lock */,
+				3C591C332B5F9106000432A4 /* Sources */,
+				3C591C342B5F9106000432A4 /* Frameworks */,
+				3C591C352B5F9106000432A4 /* Resources */,
+				FDA15BAD0BCF649F7D3AC5F4 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "swifty-bank";
+			packageProductDependencies = (
+				3C591C662B5F97F0000432A4 /* CachedAsyncImage */,
+			);
+			productName = "swifty-bank";
+			productReference = 3C591C372B5F9106000432A4 /* swifty-bank.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3C591C472B5F9107000432A4 /* swifty-bankTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C591C5F2B5F9107000432A4 /* Build configuration list for PBXNativeTarget "swifty-bankTests" */;
+			buildPhases = (
+				3C591C442B5F9107000432A4 /* Sources */,
+				3C591C452B5F9107000432A4 /* Frameworks */,
+				3C591C462B5F9107000432A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C591C4A2B5F9107000432A4 /* PBXTargetDependency */,
+			);
+			name = "swifty-bankTests";
+			productName = "swifty-bankTests";
+			productReference = 3C591C482B5F9107000432A4 /* swifty-bankTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3C591C512B5F9107000432A4 /* swifty-bankUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C591C622B5F9107000432A4 /* Build configuration list for PBXNativeTarget "swifty-bankUITests" */;
+			buildPhases = (
+				3C591C4E2B5F9107000432A4 /* Sources */,
+				3C591C4F2B5F9107000432A4 /* Frameworks */,
+				3C591C502B5F9107000432A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C591C542B5F9107000432A4 /* PBXTargetDependency */,
+			);
+			name = "swifty-bankUITests";
+			productName = "swifty-bankUITests";
+			productReference = 3C591C522B5F9107000432A4 /* swifty-bankUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3C591C2F2B5F9106000432A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					3C591C362B5F9106000432A4 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					3C591C472B5F9107000432A4 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 3C591C362B5F9106000432A4;
+					};
+					3C591C512B5F9107000432A4 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 3C591C362B5F9106000432A4;
+					};
+				};
+			};
+			buildConfigurationList = 3C591C322B5F9106000432A4 /* Build configuration list for PBXProject "swifty-bank" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3C591C2E2B5F9106000432A4;
+			packageReferences = (
+				3C591C652B5F97F0000432A4 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
+			productRefGroup = 3C591C382B5F9106000432A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C591C362B5F9106000432A4 /* swifty-bank */,
+				3C591C472B5F9107000432A4 /* swifty-bankTests */,
+				3C591C512B5F9107000432A4 /* swifty-bankUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3C591C352B5F9106000432A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CE547072B70F54600F1AA09 /* OFL.txt in Resources */,
+				3CD71EE02B72524800714321 /* NotoSansKR-SemiBold.ttf in Resources */,
+				3CD71EDF2B72524800714321 /* NotoSansKR-Medium.ttf in Resources */,
+				3CD71EE32B72524800714321 /* NotoSansKR-ExtraBold.ttf in Resources */,
+				3C6B91F72B8E24DB001439B2 /* Assets.xcassets in Resources */,
+				3CD71EE52B72524800714321 /* NotoSansKR-Bold.ttf in Resources */,
+				3CD71EE42B72524800714321 /* NotoSansKR-Light.ttf in Resources */,
+				3C591C432B5F9107000432A4 /* Preview Assets.xcassets in Resources */,
+				3CAFFDBE2B6C67D800C532CF /* CustomIcons.xcassets in Resources */,
+				3CD71EDD2B72524500714321 /* NotoSansKR-Black.ttf in Resources */,
+				3CD71EDE2B72524800714321 /* NotoSansKR-ExtraLight.ttf in Resources */,
+				3CD71EE22B72524800714321 /* NotoSansKR-Thin.ttf in Resources */,
+				3CE547082B70F54600F1AA09 /* README.txt in Resources */,
+				3CD71EE12B72524800714321 /* NotoSansKR-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C591C462B5F9107000432A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C591C502B5F9107000432A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EF06B009253DD3BD139211CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swifty-bank-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDA15BAD0BCF649F7D3AC5F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swifty-bank/Pods-swifty-bank-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swifty-bank/Pods-swifty-bank-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swifty-bank/Pods-swifty-bank-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C591C332B5F9106000432A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C40F07A2B8A82400083FDF4 /* HomeViewModel.swift in Sources */,
+				3CE547102B70F7B100F1AA09 /* WebView.swift in Sources */,
+				3CE546F32B70E2CA00F1AA09 /* PasswordView.swift in Sources */,
+				3C591C3D2B5F9106000432A4 /* ContentView.swift in Sources */,
+				3C591CA32B5FE5D2000432A4 /* Taptic.swift in Sources */,
+				3CE546F82B70E4D900F1AA09 /* InputItem.swift in Sources */,
+				3CE546F42B70E2CC00F1AA09 /* PasswordViewModel.swift in Sources */,
+				3CAFFDBA2B6C5F7400C532CF /* ViewRouter.swift in Sources */,
+				3CE5470C2B70F7A100F1AA09 /* WebViewModel.swift in Sources */,
+				3C40F07C2B8A824A0083FDF4 /* HomeView.swift in Sources */,
+				3C591C3B2B5F9106000432A4 /* swifty_bankApp.swift in Sources */,
+				3C591CA12B5FE5D2000432A4 /* UserDefaultsManager.swift in Sources */,
+				3C591CA22B5FE5D2000432A4 /* Dimensions.swift in Sources */,
+				3C05F44B2B8D631900FACB86 /* TouchState.swift in Sources */,
+				3CE546FB2B70F1E600F1AA09 /* RoundedCorner.swift in Sources */,
+				3CE546F62B70E4CE00F1AA09 /* NumberPadItem.swift in Sources */,
+				3CAFFDBC2B6C670500C532CF /* TabBarItem.swift in Sources */,
+				3C591CA02B5FE5D2000432A4 /* Config.swift in Sources */,
+				3C591C912B5FE5AA000432A4 /* NotoSans.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C591C442B5F9107000432A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C591C4D2B5F9107000432A4 /* swifty_bankTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C591C4E2B5F9107000432A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C591C592B5F9107000432A4 /* swifty_bankUITestsLaunchTests.swift in Sources */,
+				3C591C572B5F9107000432A4 /* swifty_bankUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C591C4A2B5F9107000432A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C591C362B5F9106000432A4 /* swifty-bank */;
+			targetProxy = 3C591C492B5F9107000432A4 /* PBXContainerItemProxy */;
+		};
+		3C591C542B5F9107000432A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C591C362B5F9106000432A4 /* swifty-bank */;
+			targetProxy = 3C591C532B5F9107000432A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3C591C5A2B5F9107000432A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3C591C5B2B5F9107000432A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		3C591C5D2B5F9107000432A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3917569FFE292439AE5A172 /* Pods-swifty-bank.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "swifty-bank/swifty_bank.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"swifty-bank/Preview Content\"";
+				DEVELOPMENT_TEAM = 45339DQ884;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "swifty-bank/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Swifty;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swifty.swifty-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3C591C5E2B5F9107000432A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2880CA8A3034007CE08FF0F4 /* Pods-swifty-bank.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "swifty-bank/swifty_bank.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"swifty-bank/Preview Content\"";
+				DEVELOPMENT_TEAM = 45339DQ884;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "swifty-bank/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Swifty;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swifty.swifty-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		3C591C602B5F9107000432A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swifty.swifty-bankTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swifty-bank.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/swifty-bank";
+			};
+			name = Debug;
+		};
+		3C591C612B5F9107000432A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swifty.swifty-bankTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swifty-bank.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/swifty-bank";
+			};
+			name = Release;
+		};
+		3C591C632B5F9107000432A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swifty.swifty-bankUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "swifty-bank";
+			};
+			name = Debug;
+		};
+		3C591C642B5F9107000432A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swifty.swifty-bankUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "swifty-bank";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C591C322B5F9106000432A4 /* Build configuration list for PBXProject "swifty-bank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C591C5A2B5F9107000432A4 /* Debug */,
+				3C591C5B2B5F9107000432A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C591C5C2B5F9107000432A4 /* Build configuration list for PBXNativeTarget "swifty-bank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C591C5D2B5F9107000432A4 /* Debug */,
+				3C591C5E2B5F9107000432A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C591C5F2B5F9107000432A4 /* Build configuration list for PBXNativeTarget "swifty-bankTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C591C602B5F9107000432A4 /* Debug */,
+				3C591C612B5F9107000432A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C591C622B5F9107000432A4 /* Build configuration list for PBXNativeTarget "swifty-bankUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C591C632B5F9107000432A4 /* Debug */,
+				3C591C642B5F9107000432A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3C591C652B5F97F0000432A4 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3C591C662B5F97F0000432A4 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C591C652B5F97F0000432A4 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3C591C2F2B5F9106000432A4 /* Project object */;
+}
