@@ -1,3 +1,3 @@
 import Foundation
 
-let DOCK_HEIGHT:CGFloat = 100
+let DOCK_HEIGHT:CGFloat = 66

@@ -3,15 +3,17 @@ import WebKit
 
 struct WebView: UIViewRepresentable {
     
+    @EnvironmentObject var webViewModel: WebViewModel
     var contentController = ContentController()
+    
+    @State var viewRouter: ViewRouter
     @State var safeAreaBottomHeight: CGFloat
     
-    @EnvironmentObject var webViewModel: WebViewModel
-    
     func makeUIView(context: Context) -> WKWebView {
-//        guard let url = URL(string: webViewModel.url) else{
-//            return WKWebView()
-//        }
+        //        guard let url = URL(string: webViewModel.url) else{
+        //            return WKWebView()
+        //        }
+        contentController.viewRouter = viewRouter
         
         let config = WKWebViewConfiguration()
         config.preferences = WKPreferences()
@@ -23,7 +25,7 @@ struct WebView: UIViewRepresentable {
         webview.allowsBackForwardNavigationGestures = false
         webview.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
-        webview.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: -safeAreaBottomHeight, right: 0)
+        webview.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         webview.scrollView.contentInsetAdjustmentBehavior = .never
         
         NotificationCenter.default.removeObserver(webview, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
@@ -32,9 +34,8 @@ struct WebView: UIViewRepresentable {
         
         
         webview.configuration.userContentController.add(contentController, name: "bridge")
-        webview.configuration.userContentController.add(contentController, name: "taptic")
         
-    
+        
         guard let url = URL(string: webViewModel.url) else {
             return WKWebView()
         }
@@ -47,35 +48,105 @@ struct WebView: UIViewRepresentable {
     }
     
     class ContentController: NSObject, WKScriptMessageHandler {
+        var viewRouter: ViewRouter?
+        
+        init(viewRouter: ViewRouter? = nil) {
+            self.viewRouter = viewRouter
+        }
+        
         func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
             print(message)
             if message.name == "bridge"{
-                ///add json parser here
-                ///add uuid generator here
-                print(message.body)
-                message.webView?.evaluateJavaScript("window.NativeInterface.receivedFromIos('test')")
-                message.webView?.evaluateJavaScript("localStorage.val = 'test'")
-            }
-            else if message.name == "taptic"{
+                //              {
+                //                  "type" : "ui",
+                //                  "action": "taptic-light",
+                //                  "callback" : "alert('testing alert')"
+                //              }
+                
+                let jsonDecoder = JSONDecoder()
+                var bridge: Bridge?
+                do {
+                    let body = try? JSONSerialization.data(withJSONObject: message.body)
+                    bridge = try jsonDecoder.decode(Bridge.self, from: body!)
+                } catch {
+                    print(error)
+                }
+                
+                if bridge?.type == "ui"{
+                    switch bridge?.action {
+                    case "taptic-rigid":
+                        let feedbackGenerator = UIImpactFeedbackGenerator(style: .rigid)
+                        feedbackGenerator.impactOccurred()
+                    case "taptic-soft":
+                        let feedbackGenerator = UIImpactFeedbackGenerator(style: .soft)
+                        feedbackGenerator.impactOccurred()
+                    case "taptic-heavy":
+                        let feedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
+                        feedbackGenerator.impactOccurred()
+                    case "taptic-medium":
+                        let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
+                        feedbackGenerator.impactOccurred()
+                    case "taptic-light":
+                        let feedbackGenerator = UIImpactFeedbackGenerator(style: .light)
+                        feedbackGenerator.impactOccurred()
+                    case "taptic-error":
+                        let feedbackGenerator = UINotificationFeedbackGenerator()
+                        feedbackGenerator.notificationOccurred(.error)
+                    case "taptic-success":
+                        let feedbackGenerator = UINotificationFeedbackGenerator()
+                        feedbackGenerator.notificationOccurred(.success)
+                    case "taptic-warning":
+                        let feedbackGenerator = UINotificationFeedbackGenerator()
+                        feedbackGenerator.notificationOccurred(.warning)
+                    case "shadow-enable":
+                        withAnimation(.easeInOut(duration: 0.4)){
+                            viewRouter?.isShadow = true
+                            viewRouter?.shadowAlpha = Double(bridge?.data ?? "0.25") ?? 0.25
+                        }
+                    case "shadow-disable":
+                        withAnimation(.easeInOut(duration: 0.4)){
+                            viewRouter?.isShadow = false
+                            viewRouter?.shadowAlpha = Double(bridge?.data ?? "0.25") ?? 0.25
+                        }
+                    case "area-margin-top-enable":
+                        withAnimation(.easeInOut(duration: 0.4)){
+                            viewRouter?.isWebViewMarginTop = true
+                        }
+                    case "area-margin-top-disable":
+                        withAnimation(.easeInOut(duration: 0.4)){
+                            viewRouter?.isWebViewMarginTop = false
+                        }
+                    case "area-margin-bottom-enable":
+                        withAnimation(.easeInOut(duration: 0.4)){
+                            viewRouter?.isWebViewMarginBottom = true
+                        }
+                    case "area-margin-bottom-disable":
+                        withAnimation(.easeInOut(duration: 0.4)){
+                            viewRouter?.isWebViewMarginBottom = false
+                        }
+                    case "tabbar-enable":
+                        withAnimation(.easeInOut(duration: 0.24)){
+                            viewRouter?.isTabBar = true
+                        }
+                    case "tabbar-disable":
+                        withAnimation(.easeInOut(duration: 0.24)){
+                            viewRouter?.isTabBar = false
+                        }
+                    default:
+                        print(bridge?.action ?? "empty action from webview")
+                    }
+                } else if bridge?.type == "data"{
+                    if (bridge != nil) {
+                        print(bridge!.callback)
+                        message.webView?.evaluateJavaScript(bridge!.callback)
+                    }
+                }
+                
+                message.webView?.evaluateJavaScript("window.NativeInterface.receivedFromIos('\(UIDevice.current.identifierForVendor?.uuidString ?? "UUID unavailable")')")
+                
                 ///change "taptic" to "ui" and accept json only
                 ///add json parser here
-                let feedbackGenerator: UIImpactFeedbackGenerator
-                switch message.body as? String ?? "light" {
-                case "rigid":
-                    feedbackGenerator = UIImpactFeedbackGenerator(style: .rigid)
-                case "soft":
-                    feedbackGenerator = UIImpactFeedbackGenerator(style: .soft)
-                case "heavy":
-                    feedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
-                case "medium":
-                    feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
-                case "light":
-                    feedbackGenerator = UIImpactFeedbackGenerator(style: .light)
-                default:
-                    feedbackGenerator = UIImpactFeedbackGenerator(style: .light)
-                }
-                feedbackGenerator.prepare()
-                feedbackGenerator.impactOccurred()
+                
             }
         }
     }
@@ -83,7 +154,7 @@ struct WebView: UIViewRepresentable {
 
 struct WebView_Previews: PreviewProvider{
     static var previews: some View{
-        WebView(safeAreaBottomHeight: 0)
+        WebView(viewRouter: ViewRouter(), safeAreaBottomHeight: 0)
             .environmentObject(WebViewModel())
     }
 }

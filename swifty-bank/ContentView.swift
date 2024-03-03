@@ -28,11 +28,11 @@ struct ContentView: View {
                         .frame(width: frameWidth, height: frameHeight)
                         .transition(.offset(CGSize(width: 0, height: 0)))
                 case .test_webview:
-                    WebView(safeAreaBottomHeight: geometry.safeAreaInsets.bottom)
+                    WebView(viewRouter: viewRouter, safeAreaBottomHeight: viewRouter.isWebViewMarginBottom ? geometry.safeAreaInsets.bottom : 0)
                         .environmentObject(webViewModel)
                         .frame(width: frameWidth)
                         .transition(.offset(CGSize(width: 0, height: 0)))
-                        .padding(EdgeInsets(top: geometry.safeAreaInsets.top, leading: 0, bottom: 0, trailing: 0))
+                        .padding(EdgeInsets(top: viewRouter.isWebViewMarginTop ? geometry.safeAreaInsets.top : 0, leading: 0, bottom: viewRouter.isWebViewMarginBottom ? geometry.safeAreaInsets.bottom : 0, trailing: 0))
 //                          .ignoresSafeArea(edges: [.top])
                 case .initial:
                     Spacer()
@@ -49,10 +49,10 @@ struct ContentView: View {
                                     isLoginPresented = true
                                 }
                         }
-                        Spacer()
-                            .frame(height: 25)
                     }
                     .frame(width: frameWidth, height: DOCK_HEIGHT)
+//                    .transformEffect(.init(translationX: 0, y: viewRouter.isTabBar ? 0 : DOCK_HEIGHT))
+                    
                     .background(.backgroundMaster)
                     .cornerRadius(25, corners: [.topLeft, .topRight])
                     .shadow(color: .black.opacity(0.15), radius: 6, x:0, y:-1)
@@ -61,9 +61,12 @@ struct ContentView: View {
                         viewRouter.currentPage = .test_home
                     })
                 }
-                .ignoresSafeArea([.container, .keyboard])
+                .transition(.move(edge: .bottom))
+                .opacity(viewRouter.isTabBar ? 1 : 0)
+                .ignoresSafeArea([.keyboard])
             }
             .ignoresSafeArea(.container)
+            .background(.black.opacity(viewRouter.isShadow ? viewRouter.shadowAlpha : 0))
             .fullScreenCover(isPresented: $isLoginPresented){
                 PasswordView()
                     .environmentObject(passwordViewModel)
