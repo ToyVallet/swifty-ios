@@ -16,7 +16,6 @@
 		3C591C4D2B5F9107000432A4 /* swifty_bankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C591C4C2B5F9107000432A4 /* swifty_bankTests.swift */; };
 		3C591C572B5F9107000432A4 /* swifty_bankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C591C562B5F9107000432A4 /* swifty_bankUITests.swift */; };
 		3C591C592B5F9107000432A4 /* swifty_bankUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C591C582B5F9107000432A4 /* swifty_bankUITestsLaunchTests.swift */; };
-		3C591C672B5F97F0000432A4 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3C591C662B5F97F0000432A4 /* CachedAsyncImage */; };
 		3C591C912B5FE5AA000432A4 /* NotoSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C591C832B5FE5AA000432A4 /* NotoSans.swift */; };
 		3C591CA02B5FE5D2000432A4 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C591C9C2B5FE5D2000432A4 /* Config.swift */; };
 		3C591CA12B5FE5D2000432A4 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C591C9D2B5FE5D2000432A4 /* UserDefaultsManager.swift */; };
@@ -118,7 +117,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C591C672B5F97F0000432A4 /* CachedAsyncImage in Frameworks */,
 				6B148F4C1923ED6E6791AAA5 /* Pods_swifty_bank.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,7 +336,6 @@
 			);
 			name = "swifty-bank";
 			packageProductDependencies = (
-				3C591C662B5F97F0000432A4 /* CachedAsyncImage */,
 			);
 			productName = "swifty-bank";
 			productReference = 3C591C372B5F9106000432A4 /* swifty-bank.app */;
@@ -910,14 +907,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		3C591C662B5F97F0000432A4 /* CachedAsyncImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3C591C652B5F97F0000432A4 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
-			productName = CachedAsyncImage;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3C591C2F2B5F9106000432A4 /* Project object */;
 }
